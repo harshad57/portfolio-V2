@@ -82,7 +82,7 @@ align-items: center;
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
     gap: 20px 0;
   }
@@ -99,7 +99,7 @@ align-items: center;
   background: #ededed;
   color: black;
   font-size: 15px;
-    width: 88%;
+    width: 86%;
     display: block;
     border: none;
     padding: 20px;
