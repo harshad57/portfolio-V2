@@ -15,7 +15,7 @@ const Card = ({ title, description, image, live, code }) => {
         <div className="contents">
           <div className='des'>
             <div className="font-[Libertinus]" style={{ fontSize: '25px', fontWeight: 'bold', color: 'black' }}>{title}</div>
-            <p className="font-[Afacad]" style={{ color:'white', fontSize: '16px' }}>{description}</p>
+            <p className="font-[Afacad]" style={{ color:'white', fontSize: '18px' }}>{description}</p>
           </div>
           <div className='btns font-[Libertinus]'>
             <button onClick={() => window.open(live, '_blank')}>live<Lottie animationData={link} loop={true} style={{ width: '40px' }} /></button>
