@@ -23,6 +23,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.11",
+    "babel-plugin-styled-components": "^2.1.4",
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
     "tailwindcss": "^4.1.11"
