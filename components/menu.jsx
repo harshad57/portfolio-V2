@@ -5,7 +5,7 @@ const Menu = ({ value, click }) => {
   return (
     <StyledWrapper className='menu'>
       <label className="burger menu" htmlFor="burger">
-        <input type="checkbox" id="burger" onClick={click} checked={value} readOnly className='menu'/>
+        <input type="checkbox" id="burger" onClick={click} checked={value} readOnly/>
         <span />
         <span />
         <span />
