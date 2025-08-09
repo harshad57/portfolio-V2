@@ -49,13 +49,13 @@ const Form = () => {
           <input className="msg" type="submit" value={status ? 'Sending...' : 'Send'} disabled={status}/>
         </form>
         <div className="social-accounts">
-          <button className="social-button" aria-label="GitHub">
+          <button className="social-button" aria-label="X" onClick={() => window.open('https://x.com/Harshad_57', '_blank')}>
             <Lottie animationData={x} loop={true} style={{ width: '43px' }} />
           </button>
-          <button className="social-button" aria-label="GitHub">
+          <button className="social-button" aria-label="Linkedin" onClick={() => window.open('https://www.linkedin.com/in/harshad-solkar', '_blank')}>
             <Lottie animationData={linkedin} loop={true} style={{ width: '43px' }} />
           </button>
-          <button className="social-button">
+          <button className="social-button" aria-label="GitHub" onClick={() => window.open('https://github.com/harshad57', '_blank')}>
             <Lottie animationData={github} loop={true} style={{ width: '43px' }} />
           </button>
         </div>
