@@ -4,68 +4,87 @@ import styled from 'styled-components';
 const Menu = ({ value, click }) => {
   return (
     <StyledWrapper className='menu'>
-      <label className="hamburger menu">
-        <input type="checkbox" onClick={click} checked={value} readOnly />
-        <svg viewBox="0 0 32 32">
-          <path fill="none" className="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22" />
-          <path fill="none" className="line" d="M7 16 27 16" />
-        </svg>
+      <label className="burger menu" htmlFor="burger">
+        <input type="checkbox" id="burger" onClick={click} checked={value} readOnly />
+        <span />
+        <span />
+        <span />
       </label>
     </StyledWrapper>
   );
-};
-
+}
 
 const StyledWrapper = styled.div`
   position: fixed;
-  top: 13px;
-  left: 13px;
+  top: 17px;
+  left: 15px;
   z-index: 10;
-
-  .menu{
+ .menu{
   display: block;
   }
-
-  .hamburger {
+  .burger {
+    position: relative;
+    width: 30px;
+    height: 26px;
+    background: transparent;
     cursor: pointer;
+    display: block;
   }
 
-  .hamburger input {
+  .burger input {
     display: none;
   }
 
-  .hamburger svg {
-    height: 43px;
-    transition: transform 0.4s ease;
+  .burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #7c3aed;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
   }
 
-  .line {
-    fill: none;
-    stroke: #7c3aed;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 3;
-    transition: stroke-dasharray 0.4s ease, stroke-dashoffset 0.4s ease;
+  .burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
   }
 
-  .line-top-bottom {
-    stroke-dasharray: 12 63;
+  .burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
   }
 
-  .hamburger input:checked + svg {
+  .burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+  }
+
+  .burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+
+  .burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  .burger input:checked ~ span:nth-of-type(3) {
     transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
   }
-
-  .hamburger input:checked + svg .line-top-bottom {
-    stroke-dasharray: 20 300;
-    stroke-dashoffset: -32.42;
-  }
-
-  @media (min-width: 900px) {
+     @media (min-width: 900px) {
  .menu {
       display: none !important;
     }
-  }
-`;
+  }`;
 
 export default Menu;
