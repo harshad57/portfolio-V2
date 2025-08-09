@@ -12,7 +12,6 @@ const Navbar = () => {
   const click = () => {
     setvalue(prev => {
       const newValue = !prev;
-      console.log('Menu open new:', newValue);
       return newValue;
     });
   };

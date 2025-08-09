@@ -51,7 +51,7 @@ export default function Home() {
 
         .subheading {
         text-align: center;
-          font-size: 19px;
+          font-size: 20px;
           line-height: 32px;
           color: var(--text-subheading);
         }

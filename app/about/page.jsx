@@ -64,7 +64,7 @@ export default function About() {
 
         .description {
           color: var(--text-subheading);
-          font-size: 19px;
+          font-size: 20px;
           line-height: 32px;
         }
 
