@@ -34,7 +34,6 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeProvider>
           <Toaster toastOptions={{style: {fontFamily: 'Afacad, sans-serif',fontSize: '16px', fontWeight: 'bold'},}}/>
-
           <Navbar />
         {loading && <Loader />}
         {!loading && children}
