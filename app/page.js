@@ -10,8 +10,8 @@ export default function Home() {
         <div className="text-content">
           <div className="heading font-[Aclonica]">Hello, my name is Harshad Solkar</div>
           <div className="subheading font-[Afacad]">
-            Full-Stack Developer <br />
-            I build fast, modern web applications using the MERN stack and Next.js
+            <strong>Full-Stack Developer</strong> <br />
+            I build fast, modern web applications using the <strong>MERN</strong> stack and <strong>Next.js</strong>
           </div>
         </div>
         <div className="animation">
@@ -51,7 +51,7 @@ export default function Home() {
 
         .subheading {
         text-align: center;
-          font-size: 20px;
+          font-size: 23px;
           line-height: 32px;
           color: var(--text-subheading);
         }
