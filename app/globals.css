@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-\[Afacad\] {
+  font-family: 'Afacad', sans-serif;
+}
+
+.font-\[Unbounded\] {
+  font-family: 'Unbounded', sans-serif;
+}
+
+.font-\[Aclonica\] {
+  font-family: 'Aclonica', sans-serif;
+}
+
+.font-\[Jockey\] {
+  font-family: 'Jockey One', sans-serif;
+}
+
+.font-\[Libertinus\] {
+  font-family: "Libertinus Sans", sans-serif;
+}
+
+html.light {
+  --bg: #ffffff;
+  --text: #000000;
+  --text-heading: #242424;
+  --text-subheading: #444d5e;
+  --skills: #2D3B4E;
+  --btn: #ffffff;
+  --contact: #F8F9FD;
+  --label-text: #5E5C68;
+}
+
+html.dark {
+  --bg: #1f2937;
+  --text: #ffffff;
+  --text-heading: #EAEAF0;
+  --text-subheading: #8c95ad;
+  --skills: #D2D7E0;
+  --btn: #dbdbdb;
+  --contact: #1f2537;
+  --label-text: #DDE0E8;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
