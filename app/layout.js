@@ -4,10 +4,14 @@ import "./globals.css";
 import React, { useEffect, useState } from 'react';
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/themeprovider";
-import Loader from '@/components/loader'
+import Loader from '@/components/loader';
 import { usePathname } from 'next/navigation';
 import { Toaster } from 'react-hot-toast';
 import Script from 'next/script';
+
+// ✅ Font initialization must be in module scope
+const geist = Geist({ subsets: ['latin'], weight: '400' });
+const geistMono = Geist_Mono({ subsets: ['latin'], weight: '400' });
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -21,7 +25,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={`${Geist.className} ${Geist_Mono.className}`}>
+      <body className={`${geist.className} ${geistMono.className}`}>
         <ThemeProvider>
           <Toaster toastOptions={{
             style: {
