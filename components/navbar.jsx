@@ -34,8 +34,8 @@ const NavItem = ({ href, label, pathname, click }) => {
 
   return (
     <div className={`label ${isActive ? 'active' : ''}`}>
-      <Link href={href} legacyBehavior>
-        <a className="icon" onClick={click}>{label}</a>
+      <Link href={href} className="icon" onClick={click}>
+        {label}
       </Link>
     </div>
   );
