@@ -24,12 +24,12 @@ const Card = ({ title, description, image, live, code }) => {
             <p className="description font-[Afacad]">{description}</p>
           </div>
           <div className="btns font-[Libertinus]">
-            <button className="btn-live" onClick={() => window.open(live, '_blank')}>
+            {live && (<button className="btn-live" onClick={() => window.open(live, '_blank')}>
               Live Project <Lottie animationData={link} loop={true} className="lottie-icon" />
-            </button>
-            <button className="btn-code" onClick={() => window.open(code, '_blank')}>
+            </button>) }
+            {code && (<button className="btn-code" onClick={() => window.open(code, '_blank')}>
               Source Code <Lottie animationData={github} loop={true} className="lottie-icon" />
-            </button>
+            </button>) }
           </div>
         </div>
       </div>
@@ -153,7 +153,7 @@ const StyledWrapper = styled.div`
 
   button {
     flex: 1;
-    padding: 9px;
+    padding: 10px;
     border-radius: 8px;
     display: flex;
     align-items: center;
